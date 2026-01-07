@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Workshop: Links Part 2</title>
+    <style>
+        /* ------- css ------- */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background-color: #f0f2f5;
+            display: flex; /* จัดให้อยู่ตรงกลาง */
+            justify-content: center;
+            padding: 40px 20px;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            width: 100%;
+            max-width: 800px; /* คุมความกว้างให้อยู่ตรงกลางสวยๆ */
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border: 2px solid #28a745; /* กรอบเขียวตามที่ระบุในไฟล์แรก */
+        }
+
+        /* ตกแต่ง Card และส่วนหัว */
+        .card-1, .card, .card1 {
+            border: 2px solid #007bff; /* กรอบน้ำเงิน */
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+        }
+
+        h2 { color: #333; margin-top: 0; font-size: 1.25rem; }
+
+        /* จัดการลิงก์และการแสดงผล */
+        a {
+            text-decoration: none; /* ไม่มีขีดเส้นใต้ตามที่คุณต้องการ */
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        pre {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 5px solid #d63384; /* เส้นสีชมพูข้างโค้ด */
+            font-size: 0.9rem;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+
+        code {
+            background: #eee;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+
+        /* ปุ่มในข้อ 5 */
+        button {
+            padding: 8px 16px;
+            margin-right: 10px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background: #fff;
+        }
+
+        .btn-link {
+            display: inline-block;
+            background-color: #6f42c1; /* สีม่วงตามรูป */
+            color: white !important;
+            padding: 8px 16px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .note {
+            font-size: 0.85rem;
+            color: #777;
+            margin-top: 10px;
+        }
+        /* ------- css ------- */
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <div class="card1">
+        <h2>3. Email Link</h2>
+        <pre>
+&lt;a href="mailto:student@example.com?subject=Hello"&gt;
+    Send an Email
+&lt;/a&gt;
+        </pre>
+        <a href="mailto:student@example.com?subject=Hello">Send an Email</a>
+    </div>
+
+    <div class="card1">
+        <h2>4. Download Links</h2>
+        <pre>&lt;a href="files/sample.txt" download&gt;Download File&lt;/a&gt;</pre>
+        <a href="#" style="background: #f1c40f; padding: 5px 10px; border-radius: 4px; color: black;">Download Text File</a>
+        <p class="note">ต้องมีไฟล์ในโฟลเดอร์จึงดาวน์โหลดได้จริง</p>
+    </div>
+
+    <div class="card1">
+        <h2>5. Button Links</h2>
+        <p>ลิงก์ที่ออกแบบให้คล้ายปุ่ม เหมาะกับปุ่มสมัคร ปุ่มอ่านเพิ่มเติม หรือปุ่มนำทาง</p>
+        <pre>
+&lt;a href="https://www.example.com" class="btn-link"&gt;
+    Visit Website
+&lt;/a&gt;
+        </pre>
+
+        <a href="#" class="btn-link">Visit Website</a>
+
+        <p>สร้างปุ่มด้วยแท็ก <code>button</code></p>
+        <pre>
+&lt;button onclick="document.location='index.html'"&gt;HTML Tutorial&lt;/button&gt;
+- มักใช้เมื่อลิงก์ไป หน้าในเว็บเดียวกัน
+- ผูกกับ DOM (document) โดยตรง
+
+&lt;button onclick="location.href='https://www.example.com'"&gt;Visit Website&lt;/button&gt;
+- นิยมใช้มากกว่า
+- เหมาะทั้งลิงก์ ภายในและภายนอกเว็บ
+- ผูกกับ window โดยตรง
+        </pre>
+
+        <button onclick="alert('ไปหน้า Tutorial')">HTML Tutorial</button>
+        <button onclick="alert('ไปหน้า Website')">Visit Website</button>
+    </div>
+
+    <div class="card module-5">
+        <h2>6. Image Link</h2>
+        <p>คลิกที่รูปภาพเพื่อเปิดลิงก์</p>
+        <pre>
+&lt;a href="https://youtube.com"&gt;
+    &lt;img src="images/sample.jpg" width="250"&gt;
+&lt;/a&gt;      
+        </pre>
+        <a href="https://youtu.be/Zi_XLOBDo_Y?si=B2oZrdH1oYc-666Y" target="_blank">
+            <img src="https://i.redd.it/michael-jackson-creates-the-hee-hee-v0-kphyondbpgzc1.jpg?width=1536&format=pjpg&auto=webp&s=208dc67e63ad1f5243895dfd14e94580a32e64f8" alt="รูปภาพ" width="250" style="border-radius: 8px;">
+        </a>
+        <p class="note">หากต้องการไปรูปของตนเอง ต้องเก็บรูปไว้ในโฟลเดอร์ เช่น <code>images/photo.jpg</code></p>
+    </div>
+
+    <div style="margin-top: 30px;">
+        <a href="#" style="font-size: 14px; color: #007bff;">← Back to HTML Tutorial</a>
+    </div>
+
+</div> </body>
+</html>
