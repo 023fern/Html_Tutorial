@@ -2,7 +2,7 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    <title>Workshop: Links Part 2</title>
+    <title>Workshop: Links Part 1-6 (Merged)</title>
     <style>
         /* ------- css ------- */
         * {
@@ -12,7 +12,7 @@
         body {
             font-family: 'Segoe UI', Tahoma, sans-serif;
             background-color: #f0f2f5;
-            display: flex; /* จัดให้อยู่ตรงกลาง */
+            display: flex;
             justify-content: center;
             padding: 40px 20px;
             margin: 0;
@@ -21,26 +21,36 @@
         .container {
             background-color: white;
             width: 100%;
-            max-width: 800px; /* คุมความกว้างให้อยู่ตรงกลางสวยๆ */
+            max-width: 800px;
             padding: 30px;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            border: 2px solid #28a745; /* กรอบเขียวตามที่ระบุในไฟล์แรก */
+            border: 2px solid #28a745; /* กรอบเขียวหลัก */
         }
 
-        /* ตกแต่ง Card และส่วนหัว */
-        .card-1, .card, .card1 {
-            border: 2px solid #007bff; /* กรอบน้ำเงิน */
+        h1 { color: #d63384; text-align: center; margin-top: 0; }
+
+        .card-item {
+            border: 2px solid #007bff; /* กรอบน้ำเงินสำหรับแต่ละข้อ */
             padding: 25px;
             margin-bottom: 25px;
             border-radius: 10px;
         }
 
+        .card-sub {
+            border: 2px solid #ff69b4; /* กรอบชมพูสำหรับข้อย่อย */
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column; 
+            gap: 8px;
+        }
+
         h2 { color: #333; margin-top: 0; font-size: 1.25rem; }
 
-        /* จัดการลิงก์และการแสดงผล */
         a {
-            text-decoration: none; /* ไม่มีขีดเส้นใต้ตามที่คุณต้องการ */
+            text-decoration: none;
             color: #007bff;
             font-weight: bold;
         }
@@ -49,7 +59,7 @@
             background-color: #f8f9fa;
             padding: 15px;
             border-radius: 6px;
-            border-left: 5px solid #d63384; /* เส้นสีชมพูข้างโค้ด */
+            border-left: 5px solid #d63384;
             font-size: 0.9rem;
             overflow-x: auto;
             margin: 15px 0;
@@ -61,7 +71,6 @@
             border-radius: 4px;
         }
 
-        /* ปุ่มในข้อ 5 */
         button {
             padding: 8px 16px;
             margin-right: 10px;
@@ -73,7 +82,7 @@
 
         .btn-link {
             display: inline-block;
-            background-color: #6f42c1; /* สีม่วงตามรูป */
+            background-color: #6f42c1; /* สีม่วงจากชุดแรก */
             color: white !important;
             padding: 8px 16px;
             border-radius: 5px;
@@ -91,8 +100,31 @@
 <body>
 
 <div class="container">
-    
-    <div class="card1">
+    <h1>Workshop: Links Full Version</h1>
+
+    <div class="card-item">
+        <h2>1. External Links</h2>
+        <div class="card-sub">
+            <a href="https://wikipedia.org" target="_blank">Visit Wikipedia</a>
+            <code>target="_blank" เปิดในแท็บใหม่</code>
+        </div>
+        <div class="card-sub">
+            <a href="https://google.com" target="_self">Visit Google</a>
+            <code>target="_self" เปิดในหน้าเดิม</code>
+        </div>
+    </div>
+
+    <div class="card-item">
+        <h2>2. Internal Links & Anchor Links</h2>
+        <pre>&lt;a href="about.html"&gt;About Us&lt;/a&gt;
+&lt;a href="#jump"&gt;Jump to Section&lt;/a&gt;</pre>
+        <a href="#jump">Click to Jump</a>
+        <div id="jump" style="margin-top:20px; padding:10px; background:#f0f0f0;">
+            <h3>This is the jump target (ตำแหน่งปลายทาง)</h3>
+        </div>
+    </div>
+
+    <div class="card-item">
         <h2>3. Email Link</h2>
         <pre>
 &lt;a href="mailto:student@example.com?subject=Hello"&gt;
@@ -102,14 +134,14 @@
         <a href="mailto:student@example.com?subject=Hello">Send an Email</a>
     </div>
 
-    <div class="card1">
+    <div class="card-item">
         <h2>4. Download Links</h2>
         <pre>&lt;a href="files/sample.txt" download&gt;Download File&lt;/a&gt;</pre>
         <a href="#" style="background: #f1c40f; padding: 5px 10px; border-radius: 4px; color: black;">Download Text File</a>
         <p class="note">ต้องมีไฟล์ในโฟลเดอร์จึงดาวน์โหลดได้จริง</p>
     </div>
 
-    <div class="card1">
+    <div class="card-item">
         <h2>5. Button Links</h2>
         <p>ลิงก์ที่ออกแบบให้คล้ายปุ่ม เหมาะกับปุ่มสมัคร ปุ่มอ่านเพิ่มเติม หรือปุ่มนำทาง</p>
         <pre>
@@ -117,26 +149,21 @@
     Visit Website
 &lt;/a&gt;
         </pre>
-
         <a href="#" class="btn-link">Visit Website</a>
 
         <p>สร้างปุ่มด้วยแท็ก <code>button</code></p>
         <pre>
 &lt;button onclick="document.location='index.html'"&gt;HTML Tutorial&lt;/button&gt;
-- มักใช้เมื่อลิงก์ไป หน้าในเว็บเดียวกัน
-- ผูกกับ DOM (document) โดยตรง
+- มักใช้เมื่อลิงก์ไปหน้าในเว็บเดียวกัน
 
 &lt;button onclick="location.href='https://www.example.com'"&gt;Visit Website&lt;/button&gt;
-- นิยมใช้มากกว่า
-- เหมาะทั้งลิงก์ ภายในและภายนอกเว็บ
-- ผูกกับ window โดยตรง
+- นิยมใช้มากกว่า เหมาะทั้งลิงก์ภายในและภายนอก
         </pre>
-
         <button onclick="alert('ไปหน้า Tutorial')">HTML Tutorial</button>
         <button onclick="alert('ไปหน้า Website')">Visit Website</button>
     </div>
 
-    <div class="card module-5">
+    <div class="card-item">
         <h2>6. Image Link</h2>
         <p>คลิกที่รูปภาพเพื่อเปิดลิงก์</p>
         <pre>
@@ -154,5 +181,6 @@
         <a href="#" style="font-size: 14px; color: #007bff;">← Back to HTML Tutorial</a>
     </div>
 
-</div> </body>
+</div> 
+</body>
 </html>
