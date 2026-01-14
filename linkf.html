@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <title>Workshop: Links Part 1-6 (Merged)</title>
     <style>
-        /* ------- css ------- */
-        * {
-            box-sizing: border-box;
-        }
-
+        /* ------- css เดิมของคุณ ------- */
+        * { box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', Tahoma, sans-serif;
             background-color: #f0f2f5;
@@ -17,7 +14,6 @@
             padding: 40px 20px;
             margin: 0;
         }
-
         .container {
             background-color: white;
             width: 100%;
@@ -25,20 +21,12 @@
             padding: 30px;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            border: 2px solid #28a745; /* กรอบเขียวหลัก */
+            border: 2px solid #28a745;
         }
-
         h1 { color: #d63384; text-align: center; margin-top: 0; }
-
-        .card-item {
-            border: 2px solid #007bff; /* กรอบน้ำเงินสำหรับแต่ละข้อ */
-            padding: 25px;
-            margin-bottom: 25px;
-            border-radius: 10px;
-        }
-
+        .card-item { border: 2px solid #007bff; padding: 25px; margin-bottom: 25px; border-radius: 10px; }
         .card-sub {
-            border: 2px solid #ff69b4; /* กรอบชมพูสำหรับข้อย่อย */
+            border: 2px solid #ff69b4;
             padding: 15px;
             margin-bottom: 15px;
             border-radius: 8px;
@@ -46,15 +34,8 @@
             flex-direction: column; 
             gap: 8px;
         }
-
         h2 { color: #333; margin-top: 0; font-size: 1.25rem; }
-
-        a {
-            text-decoration: none;
-            color: #007bff;
-            font-weight: bold;
-        }
-
+        a { text-decoration: none; color: #007bff; font-weight: bold; }
         pre {
             background-color: #f8f9fa;
             padding: 15px;
@@ -64,13 +45,7 @@
             overflow-x: auto;
             margin: 15px 0;
         }
-
-        code {
-            background: #eee;
-            padding: 2px 5px;
-            border-radius: 4px;
-        }
-
+        code { background: #eee; padding: 2px 5px; border-radius: 4px; }
         button {
             padding: 8px 16px;
             margin-right: 10px;
@@ -79,27 +54,79 @@
             border-radius: 4px;
             background: #fff;
         }
-
         .btn-link {
             display: inline-block;
-            background-color: #6f42c1; /* สีม่วงจากชุดแรก */
+            background-color: #6f42c1;
             color: white !important;
             padding: 8px 16px;
             border-radius: 5px;
             margin-bottom: 10px;
         }
-
-        .note {
-            font-size: 0.85rem;
-            color: #777;
-            margin-top: 10px;
+        
+        /* ------- สไตล์ที่เพิ่มใหม่สำหรับปุ่มย้อนกลับ ------- */
+        .header-nav {
+            display: flex;
+            justify-content: flex-start;
+            margin-bottom: 20px;
         }
-        /* ------- css ------- */
+        .btn-back-home {
+            background-color: #4a5568;
+            color: white !important;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-back-home:hover {
+            background-color: #2d3748;
+            transform: translateX(-5px);
+        }
+        .footer-nav {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #eee;
+            text-align: center;
+        }
+        /* สไตล์ปุ่มเพิ่มเติมสำหรับข้อ 7 */
+        .btn-custom {
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            text-align: center;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary { background-color: #007bff; color: white !important; }
+        .btn-primary:hover { background-color: #0056b3; }
+
+        .btn-success { background-color: #28a745; color: white !important; }
+        .btn-success:hover { background-color: #218838; }
+
+        .btn-danger { background-color: #dc3545; color: white !important; }
+        .btn-danger:hover { background-color: #c82333; }
+
+        .btn-outline { 
+            border: 2px solid #007bff; 
+            color: #007bff !important; 
+            background-color: transparent;
+        }
+        .btn-outline:hover { 
+            background-color: #007bff; 
+            color: white !important; 
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
+    <div class="header-nav">
+        <a href="index.html" class="btn-back-home">🏠 กลับสู่หน้าหลัก Tutorial</a>
+    </div>
+
     <h1>Workshop: Links Full Version</h1>
 
     <div class="card-item">
@@ -113,7 +140,8 @@
             <code>target="_self" เปิดในหน้าเดิม</code>
         </div>
     </div>
-
+ git config --global user.email "fernkk4@gmail.com"
+  git config --global user.name "023fern"
     <div class="card-item">
         <h2>2. Internal Links & Anchor Links</h2>
         <pre>&lt;a href="about.html"&gt;About Us&lt;/a&gt;
@@ -125,62 +153,42 @@
     </div>
 
     <div class="card-item">
-        <h2>3. Email Link</h2>
-        <pre>
-&lt;a href="mailto:student@example.com?subject=Hello"&gt;
-    Send an Email
-&lt;/a&gt;
-        </pre>
-        <a href="mailto:student@example.com?subject=Hello">Send an Email</a>
-    </div>
-
-    <div class="card-item">
-        <h2>4. Download Links</h2>
-        <pre>&lt;a href="files/sample.txt" download&gt;Download File&lt;/a&gt;</pre>
-        <a href="#" style="background: #f1c40f; padding: 5px 10px; border-radius: 4px; color: black;">Download Text File</a>
-        <p class="note">ต้องมีไฟล์ในโฟลเดอร์จึงดาวน์โหลดได้จริง</p>
-    </div>
-
-    <div class="card-item">
         <h2>5. Button Links</h2>
-        <p>ลิงก์ที่ออกแบบให้คล้ายปุ่ม เหมาะกับปุ่มสมัคร ปุ่มอ่านเพิ่มเติม หรือปุ่มนำทาง</p>
-        <pre>
-&lt;a href="https://www.example.com" class="btn-link"&gt;
-    Visit Website
-&lt;/a&gt;
-        </pre>
-        <a href="#" class="btn-link">Visit Website</a>
-
         <p>สร้างปุ่มด้วยแท็ก <code>button</code></p>
         <pre>
 &lt;button onclick="document.location='index.html'"&gt;HTML Tutorial&lt;/button&gt;
-- มักใช้เมื่อลิงก์ไปหน้าในเว็บเดียวกัน
-
-&lt;button onclick="location.href='https://www.example.com'"&gt;Visit Website&lt;/button&gt;
-- นิยมใช้มากกว่า เหมาะทั้งลิงก์ภายในและภายนอก
         </pre>
-        <button onclick="alert('ไปหน้า Tutorial')">HTML Tutorial</button>
+        <button onclick="document.location='index.html'">HTML Tutorial (Home)</button>
         <button onclick="alert('ไปหน้า Website')">Visit Website</button>
     </div>
 
     <div class="card-item">
         <h2>6. Image Link</h2>
-        <p>คลิกที่รูปภาพเพื่อเปิดลิงก์</p>
-        <pre>
-&lt;a href="https://youtube.com"&gt;
-    &lt;img src="images/sample.jpg" width="250"&gt;
-&lt;/a&gt;      
-        </pre>
-        <a href="https://youtu.be/Zi_XLOBDo_Y?si=B2oZrdH1oYc-666Y" target="_blank">
+        <a href="https://youtu.be/Zi_XLOBDo_Y" target="_blank">
             <img src="https://i.redd.it/michael-jackson-creates-the-hee-hee-v0-kphyondbpgzc1.jpg?width=1536&format=pjpg&auto=webp&s=208dc67e63ad1f5243895dfd14e94580a32e64f8" alt="รูปภาพ" width="250" style="border-radius: 8px;">
         </a>
-        <p class="note">หากต้องการไปรูปของตนเอง ต้องเก็บรูปไว้ในโฟลเดอร์ เช่น <code>images/photo.jpg</code></p>
     </div>
+<div class="card-item">
+        <h2>7. Button Styles Example</h2>
+        <p>ตัวอย่างการแต่งปุ่มด้วย CSS คลาสต่างๆ เพื่อแยกประเภทการใช้งาน</p>
+        
+        <div class="card-sub" style="flex-direction: row; gap: 15px; flex-wrap: wrap;">
+            <a href="#" class="btn-custom btn-primary">Primary Button</a>
+            <a href="#" class="btn-custom btn-success">Success Button</a>
+            <a href="#" class="btn-custom btn-danger">Danger Button</a>
+            <a href="#" class="btn-custom btn-outline">Outline Button</a>
+        </div>
 
-    <div style="margin-top: 30px;">
-        <a href="#" style="font-size: 14px; color: #007bff;">← Back to HTML Tutorial</a>
+        <pre>
+/* วิธีใช้งานใน HTML */
+&lt;a href="..." class="btn-custom btn-primary"&gt;Primary&lt;/a&gt;
+&lt;a href="..." class="btn-custom btn-danger"&gt;Danger&lt;/a&gt;
+        </pre>
     </div>
-
+    <div class="footer-nav">
+        <a href="index.html" style="font-size: 16px; color: #007bff;">← กลับสู่หน้า HTML Tutorial หลัก</a>
+    </div>
 </div> 
+
 </body>
 </html>

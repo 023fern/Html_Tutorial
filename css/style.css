@@ -1,0 +1,216 @@
+/* =========================================
+General & Layout)
+   ========================================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* ทำให้การกดเลขเมนูแล้วเลื่อนลงดูนุ่มนวล */
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #3a4c6d;
+    padding: 40px 20px;
+}
+
+.header {
+    background-color: #89b3dd;
+    color: rgb(0, 0, 0);
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 30px;
+}
+
+.header ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-text-link {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px 12px;
+    border-radius: 4px;
+}
+
+.btn-text-link a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* การ์ดเนื้อหามาตรฐาน */
+.card,
+.container,
+.card1 {
+    background: white;
+    max-width: 900px;
+    margin: 0 auto 30px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.badge {
+    background: #e91e63;
+    color: white;
+    font-size: 0.75rem;
+    padding: 3px 8px;
+    border-radius: 5px;
+    vertical-align: middle;
+}
+
+pre {
+    background: #2d3436;
+    color: #fab1a0;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-size: 0.9rem;
+    margin: 15px 0;
+}
+
+code {
+    background: #e1e8ed;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #d63384;
+}
+
+/* =========================================
+1) Image Basic (src/alt)
+   ========================================= */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* =========================================
+2) Resize & Aspect Ratio
+   ========================================= */
+.img-fixed {
+    width: 260px;
+    height: 160px;
+    object-fit: cover;
+    border: 3px solid #eee;
+}
+
+/* =========================================
+3) Object Fit (Contain, Fill, Cover)
+   ========================================= */
+.contain img,
+.fill img,
+.cover img {
+    width: 100%;
+    height: 200px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+
+.contain img {
+    object-fit: contain;
+    background: #eee;
+}
+
+.fill img {
+    object-fit: fill;
+}
+
+.cover img {
+    object-fit: cover;
+}
+
+/* =========================================
+4) Image Link
+   ========================================= */
+.YT-img {
+    width: 100%;
+    max-width: 400px;
+    border: 5px solid #eee;
+    transition: 0.3s;
+}
+
+.YT-img:hover {
+    border-color: #ff0000;
+    transform: scale(1.02);
+}
+
+/* =========================================
+5) Image Gallery (Grid)
+   ========================================= */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    opacity: 0.8;
+}
+
+/* =========================================
+6) Responsive Images
+   ========================================= */
+/* ใช้ max-width: 100% ที่ตั้งไว้ในส่วนที่ 1 */
+
+/* =========================================
+7) Figure + Caption
+   ========================================= */
+figure {
+    margin-top: 20px;
+}
+
+figcaption {
+    text-align: center;
+    margin-top: 8px;
+    color: #666;
+    font-style: italic;
+}
+
+/* =========================================
+8) Local File Tips & Extra
+   ========================================= */
+.note {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 10px 15px;
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.back-link {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+    padding: 20px;
+}

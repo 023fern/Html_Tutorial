@@ -4,167 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML: Tutorials</title>
-
     <style>
-
-
-:root {
-    --bg-body: #fafafa;
-    --bg-card: #ffffff;
-    --text-main: #333333;
-    --text-muted: #666666;
-    --primary: #4a5568;
-    --accent: #3182ce;
-    --success: #00a884;
-    --border-color: #e2e8f0;
-    --code-bg: #f7f9fa;
-    --code-text: #e53e3e;
-    --highlight-pink: #c4005a;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background-color: var(--bg-body);
-    color: var(--text-main);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    line-height: 1.7;
-    padding: 50px 20px;
-}
-
-/* Container */
-.container {
-    max-width: 850px;
-    margin: 0 auto;
-}
-
-/* Headings */
-h1 {
-    font-size: 2.3rem;
-    margin-bottom: 10px;
-}
-
-h2 {
-    font-size: 1.6rem;
-    color: var(--primary);
-    margin-bottom: 15px;
-}
-
-/* Card */
-.card,
-.nav-card,
-section {
-    background-color: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    padding: 32px;
-    margin-bottom: 40px;
-}
-
-/* Hover effect */
-.card:hover {
-    transform: translateY(-2px);
-    transition: 0.2s ease;
-}
-
-/* Text */
-p {
-    color: var(--text-muted);
-    margin-bottom: 15px;
-}
-
-/* Lists */
-ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-ul li {
-    padding: 8px 0;
-    border-bottom: 1px dashed var(--border-color);
-}
-
-/* Code */
-pre {
-    background-color: var(--code-bg);
-    border-left: 4px solid var(--accent);
-    border-radius: 8px;
-    padding: 20px;
-    margin: 20px 0;
-    font-family: Consolas, monospace;
-    font-size: 0.9rem;
-    white-space: pre-wrap;
-}
-
-code {
-    background-color: var(--code-bg);
-    color: var(--code-text);
-    padding: 2px 6px;
-    border-radius: 4px;
-    border: 1px solid var(--border-color);
-}
-
-/* Buttons */
-.workshop-btn,
-.btn-back,
-.btn-top {
-    display: inline-block;
-    background-color: var(--primary);
-    color: #fff;
-    padding: 6px 14px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-size: 0.8rem;
-    transition: 0.2s ease;
-}
-
-.workshop-btn:hover,
-.btn-back:hover,
-.btn-top:hover {
-    background-color: var(--accent);
-}
-
-/* Special Boxes */
-.box {
-    background-color: #fff5f5;
-    border: 1px solid #feb2b2;
-    color: #c53030;
-    border-radius: 8px;
-    padding: 20px;
-}
-
-.note {
-    background-color: #fffaf0;
-    border-left: 4px solid #ed8936;
-    color: #9c4221;
-    padding: 15px 20px;
-    border-radius: 4px;
-    margin-top: 20px;
-}
-
-/* Highlight */
-.highlight-text {
-    color: var(--highlight-pink);
-    font-weight: bold;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    color: var(--text-muted);
-    margin-top: 40px;
-}
-
+        :root {
+            --bg-body: #fafafa; 
+            --bg-card: #ffffff; 
+            --text-main: #333333;
+            --text-muted: #666666;
+             --primary: #4a5568; 
+             --accent: #3182ce;
+            --success: #00a884; 
+            --border-color: #e2e8f0; 
+            --code-bg: #f7f9fa;
+            --code-text: #e53e3e; 
+            --highlight-pink: #c4005a;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background-color: var(--bg-body); color: var(--text-main); font-family: -apple-system, sans-serif; line-height: 1.7; padding: 50px 20px; }
+        .container { max-width: 850px; margin: 0 auto; }
+        header { margin-bottom: 30px; }
+        .nav-card, 
+        section { background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 32px; margin-bottom: 40px; }
+        h1 { font-size: 2.3rem; margin-bottom: 10px; }
+        h2 { font-size: 1.6rem; color: var(--primary); margin-bottom: 15px; display: flex; align-items: center; justify-content: space-between; }
+        p { color: var(--text-muted); margin-bottom: 15px; }
+        ul { list-style: none; }
+        ul li { 
+            padding: 10px 0;
+            border-bottom: 1px dashed var(--border-color); }
+        ul li a {
+            text-decoration: none; color: var(--accent); font-weight: bold; }
+        pre 
+        { background-color: var(--code-bg); 
+            border-left: 4px solid var(--accent); border-radius: 8px; 
+            padding: 20px; margin: 20px 0; font-family: monospace; 
+            font-size: 0.9rem; white-space: pre-wrap; }
+        .workshop-btn { background-color: var(--primary); color: #fff; padding: 6px 14px; border-radius: 20px; text-decoration: none; font-size: 0.8rem; }
+        .workshop-btn:hover { background-color: var(--accent); }
     </style>
 </head>
 <body>
-
     <div class="container">
-
         <header>
             <h1>HTML Tutorials</h1>
             <p>คู่มือพื้นฐานการเขียนเว็บด้วย HTML ฉบับ Minimal</p>
@@ -172,213 +51,29 @@ footer {
 
         <nav class="nav-card">
             <h2>Topics List</h2>
-            <ul class="topic-list">
-                <li><a href="#introduction">➜ Introduction to HTML</a></li>
-                <li><a href="#structure">➜ HTML Structure</a></li>
-                <li><a href="#heading">➜ Heading</a></li>
-                <li><a href="#paragraph">➜ Paragraph</a></li>
-                <li><a href="#formatting">➜ Text Formatting</a></li>
-                <li><a href="#creating-links">➜ Creating Links</a></li>
-                <li><a href="#lists">➜ Lists (OL & UL)</a></li>
-                <li><a href="#adding-images">➜ Adding Images</a></li>
-                <li><a href="#creating-tables">➜ Creating Tables</a></li>
-                <li><a href="#html-forms">➜ HTML Forms</a></li>
-                <li><a href="#semantic">➜ Semantic HTML</a></li>
+            <ul>
+                <li><a href="linkf.html">➜ Creating Links (Workshop Full)</a></li>
+                <li><a href="images.html">➜ Adding Images & Figure (Workshop)</a></li>
             </ul>
         </nav>
 
-        <main>
-            <section id="structure">
-                <h2>HTML Document Structure</h2>
-                <p>โครงสร้างพื้นฐานของไฟล์ HTML ที่ถูกต้อง</p>
-                <pre>
-คำอธิบาย:
-    &lt;!DOCTYPE html&gt;: ระบุว่าเป็นเอกสาร HTML5
-    &lt;html&gt;: เป็นราก (Root) ของเอกสาร HTML ทั้งหมด
-    &lt;head&gt;: ส่วนที่ใช้เก็บข้อมูลเมตา เช่น &lt;title&gt;, CSS, Encoding
-    &lt;body&gt;: ส่วนเนื้อหาที่จะแสดงผลบนหน้าเว็บ
+        <section id="creating-links">
+            <h2>Creating Links <a href="linkf.html" class="workshop-btn">View Workshop</a></h2>
+            <p>การสร้างจุดเชื่อมโยง (Hyperlinks) ทั้งภายในและภายนอก</p>
+        </section>
 
-องค์ประกอบสำคัญ:
-    - แท็ก (Tags): &lt;h1&gt;...&lt;/h1&gt;
-    - แอตทริบิวต์ (Attributes): &lt;img src="..." alt="..."&gt;
-                </pre>
-                <a href="#" class="btn-top">↑ Back to Top</a>
-            </section>
+        <section id="adding-images">
+            <h2>Adding Images <a href="images.html" class="workshop-btn">View Workshop</a></h2>
+            <p>การแทรกรูปภาพและใส่คำอธิบายภาพ (Figure & Caption)</p>
+        </section>
 
-            <section id="introduction">
-                <h2>Introduction to HTML</h2>
-                <pre>
-- HTML stands for Hyper Text Markup Language
-- HTML is the standard markup language for creating Web pages
-- HTML describes the structure of a Web page
-- HTML elements tell the browser how to display the content
-- HTML is NOT a programming language, but a markup language
-                </pre>
-                <a href="#" class="btn-top">↑ Back to Top</a>
-            </section>
-
-            <section id="heading">
-                <h2>Heading <a href="heading.html" class="workshop-btn">View Workshop</a></h2>
-                <p>การกำหนดหัวข้อลำดับต่างๆ</p>
-                <pre>
-&lt;h1&gt; Heading 1 (ใหญ่สุด) &lt;/h1&gt;
-&lt;h2&gt; Heading 2 &lt;/h2&gt;
-&lt;h3&gt; Heading 3 &lt;/h3&gt;
-&lt;h4&gt; Heading 4 &lt;/h4&gt;
-&lt;h5&gt; Heading 5 &lt;/h5&gt;
-&lt;h6&gt; Heading 6 (เล็กสุด) &lt;/h6&gt;
-                </pre>
-                <a href="#" class="btn-top">↑ Back to Top</a>
-            </section>
-
-            <section id="paragraph">
-                <h2>Paragraph</h2>
-                <p>การจัดย่อหน้าข้อความ</p>
-                <pre>
-&lt;p&gt; นี่คือย่อหน้าแรกของบทความ... &lt;/p&gt;
-&lt;p&gt; นี่คือย่อหน้าที่สอง &lt;/p&gt;
-                </pre>
-                <a href="#" class="btn-top">↑ Back to Top</a>
-            </section>
-
-            <section id="formatting">
-                <h2> Text Formatting <a href="formatting.html"class="workshop-btn">View Workshop</a></h2>
-                <p>การปรับแต่งรูปแบบตัวอักษร</p>
-                <pre>
-&lt;b&gt;   : Bold text (ตัวหนา)
-&lt;i&gt;   : Italic text (ตัวเอียง)
-&lt;u&gt;   : Underline text (ขีดเส้นใต้)
-&lt;strong&gt; : Important text (ตัวหนาเชิงความหมาย)
-&lt;em&gt;  : Emphasized text (ตัวเอียงเชิงความหมาย)
-&lt;mark&gt; : Highlighted text (ไฮไลท์สีเหลือง)
-&lt;del&gt; : Deleted text (ขีดฆ่า)
-&lt;sup&gt; : Superscript (ตัวยก)
-&lt;sub&gt; : Subscript (ตัวห้อย)
-                </pre>
-                <a href="#" class="btn-top">↑ Back to Top</a>
-            </section>
-
-            <section id="creating-links">
-                <h2>Creating Links</h2>
-                <p>การสร้างจุดเชื่อมโยง (Hyperlinks)</p>
-                <pre>
-1. ลิงก์ไปเว็บอื่น:
-   &lt;a href="https://www.google.com" target="_blank"&gt;Go to Google&lt;/a&gt;
-   (target="_blank" คือเปิดหน้าต่างใหม่)
-
-2. ลิงก์ภายในหน้าเดียวกัน (Anchor):
-   &lt;a href="#section-id"&gt;Jump to Section&lt;/a&gt;
-
-3. ลิงก์อีเมล:
-   &lt;a href="mailto:support@example.com"&gt;Email Us&lt;/a&gt;
-                </pre>
-                <a href="#" class="btn-top">↑ Back to Top</a>
-            </section>
-
-            <section id="lists">
-                <h2>Lists (Ordered & Unordered)</h2>
-                <pre>
-Unordered List (รายการแบบไม่มีลำดับ - จุด):
-&lt;ul&gt;
-    &lt;li&gt;Coffee&lt;/li&gt;
-    &lt;li&gt;Tea&lt;/li&gt;
-&lt;/ul&gt;
-
-Ordered List (รายการแบบมีลำดับ - ตัวเลข):
-&lt;ol type="1"&gt; &lt;li&gt;Step 1&lt;/li&gt;
-    &lt;li&gt;Step 2&lt;/li&gt;
-&lt;/ol&gt;
-                </pre>
-                <a href="#" class="btn-top">↑ Back to Top</a>
-            </section>
-
-            <section id="adding-images">
-                <h2>Adding Images</h2>
-                <pre>
-Syntax พื้นฐาน:
-&lt;img src="image.jpg" alt="คำอธิบายรูปภาพ" width="300"&gt;
-
-Attribute ที่ควรรู้:
-- src: ที่อยู่ของไฟล์รูป (URL หรือ Path)
-- alt: ข้อความที่จะแสดงเมื่อโหลดรูปไม่ได้ (สำคัญต่อ SEO)
-- width/height: กำหนดขนาด
-                </pre>
-                <a href="#" class="btn-top">↑ Back to Top</a>
-            </section>
-
-            <section id="creating-tables">
-                <h2>Creating Tables <a href="#" class="workshop-btn">WS 1</a> <a href="#" class="workshop-btn">WS 2</a></h2>
-                <pre>
-&lt;table border="1"&gt;
-  &lt;tr&gt; (Table Row - แถว)
-    &lt;th&gt;Header 1&lt;/th&gt; (Table Header - หัวตาราง)
-    &lt;th&gt;Header 2&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Data 1&lt;/td&gt; (Table Data - ข้อมูล)
-    &lt;td&gt;Data 2&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
-                </pre>
-                <a href="#" class="btn-top">↑ Back to Top</a>
-            </section>
-
-            <section id="html-forms">
-                <h2>HTML Forms <a href="#" class="workshop-btn">WS 1</a> <a href="#" class="workshop-btn">WS 2</a></h2>
-                <pre>
-1. โครงสร้างพื้นฐาน
-   &lt;form action="/submit" method="POST"&gt; ... &lt;/form&gt;
-
-2. Input Types ยอดนิยม
-   &lt;input type="text" placeholder="Username"&gt;
-   &lt;input type="password"&gt;
-   &lt;input type="email"&gt;
-   &lt;input type="date"&gt;
-   &lt;input type="radio" name="gender"&gt; Male
-   &lt;input type="checkbox"&gt; I agree
-
-3. ปุ่ม (Buttons)
-   &lt;button type="submit"&gt;Send&lt;/button&gt;
-   &lt;button type="reset"&gt;Clear&lt;/button&gt;
-
-4. Dropdown
-   &lt;select&gt;
-      &lt;option&gt;Option 1&lt;/option&gt;
-   &lt;/select&gt;
-                </pre>
-                <a href="#" class="btn-top">↑ Back to Top</a>
-            </section>
-
-            <section id="semantic">
-                <h2>Semantic HTML</h2>
-                <p>การใช้แท็กสื่อความหมายเพื่อโครงสร้างที่ดี</p>
-                <pre>
-&lt;header&gt;  : ส่วนหัวของเว็บ
-&lt;nav&gt;     : เมนูนำทาง
-&lt;main&gt;    : เนื้อหาหลัก
-&lt;section&gt; : แบ่งส่วนเนื้อหา
-&lt;article&gt; : บทความเนื้อหาอิสระ
-&lt;aside&gt;   : เนื้อหาเสริมด้านข้าง (Sidebar)
-&lt;footer&gt;  : ส่วนท้ายของเว็บ
-                </pre>
-                <a href="#" class="btn-top">↑ Back to Top</a>
-            </section>
-
-            <section>
-                <h2>Other Workshops</h2>
-                <ul class="topic-list">
-                    <li><a href="#">Workshop 01: Rabbing</a></li>
-                    <li><a href="#">Workshop 02: Login Form</a></li>
-                </ul>
-            </section>
-
-        </main>
-
-        <footer>
-            <p>Made for learning HTML &copy; 2024</p>
-            <p><a href="#">Learn more about HTML</a></p>
-        </footer>
-
+        <section>
+            <h2>Other Workshops</h2>
+            <ul>
+                <li><a href="images.html">Workshop 01: Figure + Caption</a></li>
+                <li><a href="linkf.html">Workshop 02: Full Links Version</a></li>
+            </ul>
+        </section>
     </div>
 </body>
 </html>
