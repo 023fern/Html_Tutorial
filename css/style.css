@@ -203,3 +203,35 @@ figcaption {
     border-radius: 8px;
     margin-top: 20px;
 }
+.images-small{
+    width: 100px;
+    height: auto;
+}
+
+/* .position{
+    display: flex;
+}
+
+.position.left{
+justify-content: flex-start;
+}
+
+.position.right{
+    justify-content: flex-end;
+}
+/* คลาสสำหรับคุมขนาดรูปภาพขนาดเล็ก */
+.img-small {
+    width: 150px; /* ปรับขนาดตามความเหมาะสม */
+    height: auto;
+}
+
+/* คลาสสำหรับจัดตำแหน่ง Flex */
+.position {
+    display: flex;
+    gap: 15px;
+    margin: 15px 0;
+} */
+
+.position.left   { justify-content: flex-start; }
+.position.center { justify-content: center; }
+.position.right  { justify-content: flex-end; }
