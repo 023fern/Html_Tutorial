@@ -1,5 +1,5 @@
 /* =========================================
-General & Layout)
+   General & Layout (แก้ไขเพื่อให้ Navbar เต็มจอ)
    ========================================= */
 * {
     box-sizing: border-box;
@@ -9,7 +9,6 @@ General & Layout)
 
 html {
     scroll-behavior: smooth;
-    /* ทำให้การกดเลขเมนูแล้วเลื่อนลงดูนุ่มนวล */
 }
 
 body {
@@ -17,17 +16,28 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #3a4c6d;
-    padding: 40px 20px;
+    /* ย้าย padding ออกจาก body เพื่อให้ header ชิดขอบ */
+    padding: 0; 
 }
 
+/* ปรับ Header ให้เป็น Navbar เต็มหน้าจอ */
 .header {
-    background-color: #89b3dd;
-    color: rgb(0, 0, 0);
-    padding: 40px;
-    border-radius: 12px;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
     text-align: center;
-    max-width: 900px;
-    margin: 0 auto 30px;
+    
+    /* --- ทำให้เต็มจอและติดด้านบน --- */
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    
+    /* ยกเลิก max-width และ margin ของเดิมเพื่อให้เต็มจอ */
+    max-width: none; 
+    margin: 0;
+    border-radius: 0; /* ลบมุมโค้งออกเพื่อให้แนบขอบจอสวยงาม */
 }
 
 .header ul {
@@ -35,7 +45,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-top: 20px;
+    margin-top: 15px;
     flex-wrap: wrap;
 }
 
@@ -43,6 +53,7 @@ body {
     background: rgba(255, 255, 255, 0.2);
     padding: 5px 12px;
     border-radius: 4px;
+    transition: 0.3s;
 }
 
 .btn-text-link a {
@@ -51,16 +62,29 @@ body {
     font-weight: bold;
 }
 
-/* การ์ดเนื้อหามาตรฐาน */
+.btn-text-link:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* =========================================
+   การ์ดเนื้อหา (คงเดิมแต่เพิ่มระยะห่างจาก Header)
+   ========================================= */
 .card,
 .container,
 .card1 {
     background: white;
     max-width: 900px;
-    margin: 0 auto 30px;
+    margin: 30px auto; /* เพิ่มระยะห่างบน-ล่าง */
     padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* เพิ่ม Padding ด้านล่างสุดของหน้าเว็บเพื่อให้เลื่อนแล้วไม่ติดขอบ */
+body::after {
+    content: "";
+    display: block;
+    height: 40px;
 }
 
 h2 {
@@ -97,7 +121,7 @@ code {
 }
 
 /* =========================================
-1) Image Basic (src/alt)
+   Image Styles (คงเดิม)
    ========================================= */
 img {
     max-width: 100%;
@@ -105,9 +129,6 @@ img {
     border-radius: 8px;
 }
 
-/* =========================================
-2) Resize & Aspect Ratio
-   ========================================= */
 .img-fixed {
     width: 260px;
     height: 160px;
@@ -115,79 +136,45 @@ img {
     border: 3px solid #eee;
 }
 
-/* =========================================
-3) Object Fit (Contain, Fill, Cover)
-   ========================================= */
-.contain img,
-.fill img,
-.cover img {
+/* Object Fit */
+.contain img, .fill img, .cover img {
     width: 100%;
     height: 200px;
     border: 1px solid #ddd;
     margin-bottom: 15px;
 }
+.contain img { object-fit: contain; background: #eee; }
+.fill img { object-fit: fill; }
+.cover img { object-fit: cover; }
 
-.contain img {
-    object-fit: contain;
-    background: #eee;
-}
-
-.fill img {
-    object-fit: fill;
-}
-
-.cover img {
-    object-fit: cover;
-}
-
-/* =========================================
-4) Image Link
-   ========================================= */
+/* Image Link Hover */
 .YT-img {
     width: 100%;
     max-width: 400px;
     border: 5px solid #eee;
     transition: 0.3s;
 }
-
 .YT-img:hover {
     border-color: #ff0000;
     transform: scale(1.02);
 }
 
-/* =========================================
-5) Image Gallery (Grid)
-   ========================================= */
+/* Gallery */
 .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
     margin-top: 20px;
 }
-
 .gallery img {
     width: 100%;
     height: 150px;
     object-fit: cover;
     transition: 0.3s;
 }
+.gallery img:hover { opacity: 0.8; }
 
-.gallery img:hover {
-    opacity: 0.8;
-}
-
-/* =========================================
-6) Responsive Images
-   ========================================= */
-/* ใช้ max-width: 100% ที่ตั้งไว้ในส่วนที่ 1 */
-
-/* =========================================
-7) Figure + Caption
-   ========================================= */
-figure {
-    margin-top: 20px;
-}
-
+/* Figure */
 figcaption {
     text-align: center;
     margin-top: 8px;
@@ -195,9 +182,7 @@ figcaption {
     font-style: italic;
 }
 
-/* =========================================
-8) Local File Tips & Extra
-   ========================================= */
+/* Note & Back Link */
 .note {
     background: #fff3cd;
     border-left: 4px solid #ffc107;
@@ -207,10 +192,13 @@ figcaption {
 }
 
 .back-link {
-    display: block;
+    display: inline-block;
+    width: 100%;
     text-align: center;
     text-decoration: none;
-    color: #3498db;
-    font-weight: bold;
-    padding: 20px;
+    color: #ffffff;
+    background: #2c3e50;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
 }
