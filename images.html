@@ -26,7 +26,8 @@
     <div class="card" id="s1">
         <h2>1) Image Basic <span class="badge">src/alt</span></h2>
         <p>รูปภาพใน HTML ใช้แท็ก <code>img</code> โดยต้องมี <code>src</code> และควรมี <code>alt</code> เสมอ</p>
-        <pre><code>&lt;img src="images/photo.jpg" alt="ภาพตัวอย่าง"&gt;</code></pre>
+        <pre>
+            &lt;img src="images/photo.jpg" alt="ภาพตัวอย่าง"&gt;</pre>
         <div class="position-gallery">
             <img src="https://traveldesk-djbmfrc9edfxb9ec.z01.azurefd.net/photos/1933-fhd.webp" alt="Travel 1">
         </div>
@@ -36,13 +37,13 @@
     <div class="card" id="s2">
         <h2>2) Resize & Aspect Ratio <span class="badge">object-fit</span></h2>
         <p>ถ้ากำหนดทั้งความกว้างและสูง ให้ใช้ <code>object-fit</code> เพื่อไม่ให้ภาพบิด</p>
-        <pre><code>
+        <pre>
 .img-fixed {
   width: 260px;
   height: 160px;
   object-fit: cover;
 }
-        </code></pre>
+        </pre>
         <img class="img-fixed" src="https://t1.blockdit.com/photos/2019/09/5d7fc207efbbcf28c92ed07b_800x0xcover_xsoX9QgX.jpg" alt="รูปภาพ">
         <p class="note"><code>cover</code> = ครอปให้เต็มกรอบ, <code>contain</code> = เห็นภาพครบ (อาจมีขอบว่าง)</p>
     </div>
@@ -51,14 +52,14 @@
         <h2>3) Object fit <span class="badge">contain fill cover</span></h2>
         <p>ตัวอย่างการใช้ <code>object-fit</code> แบบต่างๆ</p>
         
-        <pre><code>.obj-fit-image {
+        <pre>.obj-fit-image {
   width: 800px;
   height: 200px;
   border: 1px solid black;
 }
 .obj-fit-image.contain { object-fit: contain; }
 .obj-fit-image.fill { object-fit: fill; }
-.obj-fit-image.cover { object-fit: cover; }</code></pre>
+.obj-fit-image.cover { object-fit: cover; }</pre>
 
         <h3 class="title-original">ภาพต้นฉบับ</h3>
         <div class="original-box">
@@ -84,11 +85,11 @@
     <div class="card" id="s4">
         <h2>4) Image Link <span class="badge">a+img</span></h2>
         <p>คลิกที่รูปเพื่อเปิดลิงก์ เหมาะกับ banner / thumbnail</p>
-        <pre><code>
+        <pre>
 &lt;a href="https://www.youtube.com" target="_blank"&gt;
   &lt;img src="images/banner.jpg" alt="Banner"&gt;
 &lt;/a&gt;
-        </code></pre>
+     </pre>
         <a href="https://www.youtube.com" target="_blank">
             <img src="https://m.media-amazon.com/images/I/4195dyf+rFL.png" alt="Banner" class="YT-img">
         </a>
@@ -97,13 +98,13 @@
     <div class="card" id="s5">
         <h2>5) Image Gallery <span class="badge">grid</span></h2>
         <p>แสดงรูปหลายรูปด้วย Grid ให้จัดเรียงสวยและเป็นระเบียบ</p>
-        <pre><code>
+        <pre>
 .gallery { 
   display: grid; 
   grid-template-columns: repeat(3, 1fr); 
   gap: 12px; 
 }
-        </code></pre>
+       </pre>
         <div class="gallery">
             <img src="1.png" alt="Image 1">
             <img src="2.png" alt="Image 2">
@@ -114,24 +115,24 @@
     <div class="card" id="s6">
         <h2>6) Responsive Images <span class="badge">max-width:100%</span></h2>
         <p>ทำให้ภาพไม่ล้นการ์ดและย่อขยายตามหน้าจอ</p>
-        <pre><code>
+        <pre>
 img {
   max-width: 100%;
   height: auto;
 }
-        </code></pre>
+        </pre>
         <img src="https://images.dmc.tv/wallpaper/raw/0f2eb9c101b324815d366a.jpg" alt="Responsive Sea">
     </div>
 
     <div class="card" id="s7">
         <h2>7) Figure + Caption <span class="badge">semantic</span></h2>
         <p>ใช้แท็ก <code>&lt;figure&gt;</code> และ <code>&lt;figcaption&gt;</code> เพื่ออธิบายภาพ</p>
-        <pre><code>
+        <pre><
 &lt;figure&gt;
   &lt;img src="image.jpg" alt="คำอธิบาย"&gt;
   &lt;figcaption&gt;รูปที่ 1: คำอธิบายภาพ&lt;/figcaption&gt;
 &lt;/figure&gt;
-        </code></pre>
+        </pre>
         <figure style="text-align: center;">
             <img src="https://img.freepik.com/free-photo/milford-sound-new-zealand-travel-destination-concept_53876-42945.jpg" alt="Nature" style="max-width: 600px; border-radius: 8px;">
             <figcaption>รูปที่ 1: ตัวอย่างการใช้แท็ก figure และ figcaption</figcaption>
@@ -141,13 +142,13 @@ img {
     <div class="card" id="s8">
         <h2>8) Local Images <span class="badge">VS Code</span></h2>
         <p>จัดโฟลเดอร์รูปให้เป็นระเบียบ เช่น <code>images/</code> แล้วอ้างอิงแบบ relative path</p>
-        <pre><code>
+        <pre>
 my_project/ 
   ├─ index.html 
   └─ images/ 
       ├─ photo1.jpg 
       └─ banner.png
-        </code></pre>
+        </pre>
     </div>
 
     <div style="text-align: center; margin-bottom: 50px;">
