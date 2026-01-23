@@ -1,5 +1,5 @@
 /* =========================================
-   General & Layout (แก้ไขเพื่อให้ Navbar เต็มจอ)
+   1. General & Layout (พื้นฐานหน้าเว็บ)
    ========================================= */
 * {
     box-sizing: border-box;
@@ -9,36 +9,28 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top :180px;
+    scroll-padding-top: 180px; /* เวลากดลิงก์เมนู ไม่ให้หัวข้อจมหายไปใต้ Navbar */
 }
 
 body {
     font-family: "Segoe UI", Tahoma, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #3a4c6d;
-    /* ย้าย padding ออกจาก body เพื่อให้ header ชิดขอบ */
-    padding: 0; 
+    background-color: #f0f2f5; /* เปลี่ยนเป็นสีเทาอ่อนเพื่อให้สบายตา */
+    padding-bottom: 50px;
 }
 
-/* ปรับ Header ให้เป็น Navbar เต็มหน้าจอ */
+/* Navbar ส่วนหัว */
 .header {
-    background-color: #2c3e50;
+    background-color: #1a252f;
     color: white;
     padding: 20px;
     text-align: center;
-    
-    /* --- ทำให้เต็มจอและติดด้านบน --- */
     width: 100%;
     position: sticky;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    
-    /* ยกเลิก max-width และ margin ของเดิมเพื่อให้เต็มจอ */
-    max-width: none; 
-    margin: 0;
-    border-radius: 0; /* ลบมุมโค้งออกเพื่อให้แนบขอบจอสวยงาม */
 }
 
 .header ul {
@@ -52,8 +44,8 @@ body {
 
 .btn-text-link {
     background: rgba(255, 255, 255, 0.2);
-    padding: 5px 12px;
-    border-radius: 4px;
+    padding: 5px 15px;
+    border-radius: 20px; /* ทำปุ่มให้โค้งมนดูสมัยใหม่ */
     transition: 0.3s;
 }
 
@@ -64,35 +56,33 @@ body {
 }
 
 .btn-text-link:hover {
-    background: rgba(255, 255, 255, 0.4);
+    background: #e91e63; /* เปลี่ยนสีเมื่อเอาเมาส์วาง */
 }
 
-/* =========================================
-   การ์ดเนื้อหา (คงเดิมแต่เพิ่มระยะห่างจาก Header)
-   ========================================= */
-.card,
-.container,
-.card1 {
+/* การ์ดเนื้อหาหลัก */
+.card, .container, .card1 {
     background: white;
     max-width: 900px;
-    margin: 30px auto; /* เพิ่มระยะห่างบน-ล่าง */
+    margin: 30px auto;
     padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* เพิ่ม Padding ด้านล่างสุดของหน้าเว็บเพื่อให้เลื่อนแล้วไม่ติดขอบ */
-body::after {
-    content: "";
-    display: block;
-    height: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 h2 {
     color: #2c3e50;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 10px;
+    border-left: 5px solid #e91e63; /* เพิ่มขีดข้างหน้าให้ดูเด่น */
+    padding-left: 15px;
     margin-bottom: 20px;
+}
+
+pre {
+    background: #282c34;
+    color: #61dafb;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-size: 0.85rem;
 }
 
 .badge {
@@ -101,137 +91,64 @@ h2 {
     font-size: 0.75rem;
     padding: 3px 8px;
     border-radius: 5px;
-    vertical-align: middle;
-}
-
-pre {
-    background: #2d3436;
-    color: #fab1a0;
-    padding: 15px;
-    border-radius: 8px;
-    overflow-x: auto;
-    font-size: 0.9rem;
-    margin: 15px 0;
-}
-
-code {
-    background: #e1e8ed;
-    padding: 2px 6px;
-    border-radius: 4px;
-    color: #d63384;
+    margin-left: 10px;
 }
 
 /* =========================================
-   Image Styles (คงเดิม)
+   2. สไตล์เฉพาะข้อ 1-8
    ========================================= */
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
 
-.img-fixed {
-    width: 260px;
-    height: 160px;
-    object-fit: cover;
-    border: 3px solid #eee;
-}
+/* ข้อ 1: การจัดวางตำแหน่งรูป */
+.position { display: flex; margin: 20px 0; gap: 10px; }
+.position.left { justify-content: flex-start; }
+.position.center { justify-content: center; }
+.position.right { justify-content: flex-end; }
+.images-small { width: 120px; border: 2px solid #eee; }
 
-/* Object Fit */
+/* ข้อ 2-3: Object Fit */
+.img-fixed { width: 260px; height: 160px; object-fit: cover; }
 .contain img, .fill img, .cover img {
     width: 100%;
     height: 200px;
-    border: 1px solid #ddd;
-    margin-bottom: 15px;
+    background: #f9f9f9;
 }
-.contain img { object-fit: contain; background: #eee; }
+.contain img { object-fit: contain; }
 .fill img { object-fit: fill; }
 .cover img { object-fit: cover; }
 
-/* Image Link Hover */
+
+/* ข้อ 4: Image Link */
 .YT-img {
     width: 100%;
     max-width: 400px;
-    border: 5px solid #eee;
-    transition: 0.3s;
+    transition: 0.4s;
+    cursor: pointer;
 }
-.YT-img:hover {
-    border-color: #ff0000;
-    transform: scale(1.02);
-}
+.YT-img:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
 
-/* Gallery */
+/* ข้อ 5: Gallery Grid */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* ปรับตามขนาดจออัตโนมัติ */
     gap: 15px;
-    margin-top: 20px;
 }
-.gallery img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    transition: 0.3s;
-}
-.gallery img:hover { opacity: 0.8; }
+.gallery img { width: 100%; height: 150px; object-fit: cover; }
 
-/* Figure */
-figcaption {
-    text-align: center;
-    margin-top: 8px;
-    color: #666;
-    font-style: italic;
-}
+/* ข้อ 6: Responsive */
+.card1 img { max-width: 100%; height: auto; }
 
-/* Note & Back Link */
-.note {
-    background: #fff3cd;
-    border-left: 4px solid #ffc107;
-    padding: 10px 15px;
-    margin-top: 15px;
-    font-size: 0.9rem;
-}
+/* ข้อ 7: Figure */
+figcaption { margin-top: 10px; color: #7f8c8d; font-style: italic; font-size: 0.9rem; }
 
-.back-link {
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    text-decoration: none;
-    color: #ffffff;
-    background: #2c3e50;
-    padding: 15px;
-    border-radius: 8px;
-    margin-top: 20px;
+/* ข้อ 8: Local Image & Background (ส่วนที่คุณติดปัญหา) */
+.local-image {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('../images/fight.jpg'); /* ใส่ Gradient ทับเพื่อให้เห็นตัวอักษรชัด */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* ทำเอฟเฟกต์เลื่อนสวยๆ */
+    min-height: 400px;
+    color: white !important; /* บังคับให้ตัวอักษรเป็นสีขาว */
 }
-.images-small{
-    width: 100px;
-    height: auto;
-}
-
-/* .position{
-    display: flex;
-}
-
-.position.left{
-justify-content: flex-start;
-}
-
-.position.right{
-    justify-content: flex-end;
-}
-/* คลาสสำหรับคุมขนาดรูปภาพขนาดเล็ก */
-.img-small {
-    width: 150px; /* ปรับขนาดตามความเหมาะสม */
-    height: auto;
-}
-
-/* คลาสสำหรับจัดตำแหน่ง Flex */
-.position {
-    display: flex;
-    gap: 15px;
-    margin: 15px 0;
-} */
-
-.position.left   { justify-content: flex-start; }
-.position.center { justify-content: center; }
-.position.right  { justify-content: flex-end; }
+.local-image h2, .local-image p { color: white; border-color: white; }
+.local-image pre { background: rgba(0,0,0,0.7); }

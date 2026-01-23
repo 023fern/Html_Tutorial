@@ -53,39 +53,39 @@
         <p class="note"><code>cover</code> = ครอปให้เต็มกรอบ, <code>contain</code> = เห็นภาพครบ (อาจมีขอบว่าง)</p>
     </div>
 
-   <div class="card" id="s3">
-        <h2>3) Object fit <span class="badge">contain fill cover</span></h2>
-        <p>ตัวอย่างการใช้ <code>object-fit</code> แบบต่างๆ</p>
-        
-        <pre>.obj-fit-image {
-  width: 800px;
-  height: 200px;
-  border: 1px solid black;
-}
-.obj-fit-image.contain { object-fit: contain; }
-.obj-fit-image.fill { object-fit: fill; }
-.obj-fit-image.cover { object-fit: cover; }</pre>
+   <div class="card" id ="s3">
+            <h2> 3) Object fit <span class="badge">contain fill cover</span></h2>
+            <p>ตัวอย่างการใช้ <code>object-fit</code>แบบต่างๆ</p>
+            <pre>
+    .obj-fit-image{
+    width: 800px;
+    height: 200px;
+    border: 1px solid black;
+    }
+    .obj-fit-image.contain { object-fit: contain; }
+    .obj-fit-image.fill { object-fit: fill; }
+    .obj-fit-image.cover { object-fit: cover; }
+            </pre>
 
-        <h3 class="title-original">ภาพต้นฉบับ</h3>
-        <div class="original-box">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2oIQVOMcK9rw82bItgD357xJfx_s54ZMDeQ&s" alt="Original">
-        </div>
+            <h3>ภาพต้นฉบับ</h3>
+                <img src="images/gun.jpg" alt="">
+            <h3>ใส่ <code>object-fit: contain</code> ➡️เห็นภาพครบ รักษาสัดส่วน (อาจมีขอบว่าง)</h3>
+            
+            <div class="contain">
+                <img src="images/gun.jpg" alt="">
+            </div>
 
-        <h3 class="fit-label">ใส่ <code>object-fit: contain</code> ➡️ เห็นภาพครบ รักษาสัดส่วน (อาจมีขอบว่าง)</h3>
-        <div class="contain">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2oIQVOMcK9rw82bItgD357xJfx_s54ZMDeQ&s" alt="Contain">
-        </div>
+            <h3>object-fit: fill ➡️ยืดภาพให้เต็มกล่อง ภาพอาจบิด (สัดส่วนเพี้ยน)</h3>
 
-        <h3 class="fit-label">object-fit: fill ➡️ ยืดภาพให้เต็มกล่อง ภาพอาจบิด (สัดส่วนเพี้ยน)</h3>
-        <div class="fill">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2oIQVOMcK9rw82bItgD357xJfx_s54ZMDeQ&s" alt="Fill">
-        </div>
+            <div class="fill">
+                <img src="images/gun.jpg" alt="">
+            </div>
 
-        <h3 class="fit-label">object-fit: cover ➡️ ครอปภาพให้เต็มกล่อง รักษาสัดส่วน บางส่วนของภาพจะถูกตัดออก</h3>
-        <div class="cover">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2oIQVOMcK9rw82bItgD357xJfx_s54ZMDeQ&s" alt="Cover">
-        </div>
-    </div>
+            <h3>object-fit: cover ➡️ครอปภาพให้เต็มกล่อง รักษาสัดส่วน บางส่วนของภาพจะถูกตัดออก</h3>
+
+            <div class="cover">
+                <img src="images/gun.jpg" alt="">
+            </div>
 
     <div class="card" id="s4">
         <h2>4) Image Link <span class="badge">a+img</span></h2>
@@ -111,9 +111,9 @@
 }
        </pre>
         <div class="gallery">
-            <img src="1.png" alt="Image 1">
-            <img src="2.png" alt="Image 2">
-            <img src="3.png" alt="Image 3">
+            <img src="images/idk.jpg" alt="Image 1">
+            <img src="images/mo.jpg" alt="Image 2">
+            <img src="images/rb.jpg" alt="Image 3">
         </div>
     </div>
 
@@ -144,21 +144,33 @@ img {
         </figure>
     </div>
 
-    <div class="card" id="s8">
-        <h2>8) Local Images <span class="badge">VS Code</span></h2>
-        <p>จัดโฟลเดอร์รูปให้เป็นระเบียบ เช่น <code>images/</code> แล้วอ้างอิงแบบ relative path</p>
+     <div class="card local-image" id="s8">
+        <h2>
+          8) ใช้รูปจากเครื่อง (Local Images)<span class="badge">VS Code</span>
+        </h2>
+        <p>
+          จัดโฟลเดอร์รูปให้เป็นระเบียบ เช่น <code>images/</code> แล้วอ้างอิงแบบ
+          relative path
+        </p>
         <pre>
-my_project/ 
-  ├─ index.html 
-  └─ images/ 
-      ├─ photo1.jpg 
-      └─ banner.png
-        </pre>
-    </div>
+          my_project/ 
+              ├─ index.html 
+              └─ images/ 
+                  ├─ photo1.jpg 
+                  └─ banner.png 
+ 
+          &lt;img src="images/fight.jpg" alt="My Photo"&gt;
+         </pre>
+        <p class="note">
+          แนะนำให้ตั้งชื่อไฟล์รูปเป็นภาษาอังกฤษ ไม่มีช่องว่าง เช่น
+          <code>phoho1.jpg </code>
+        </p>
+  </div>
 
-    <div style="text-align: center; margin-bottom: 50px;">
-        <a class="back-link" href="index.html" style="background-color: #2c3e50; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none;">← Back to HTML Tutorial</a>
-    </div>
+
+
+      <!-- For Group 10: Back to Tutorial -->
+      <a class="back-link" href="index.html">← Back to HTML Tutorial</a>
 
 </body>
 </html>
