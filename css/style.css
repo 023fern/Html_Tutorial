@@ -7,6 +7,7 @@
     padding: 0;
 }
 
+
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 180px; /* เวลากดลิงก์เมนู ไม่ให้หัวข้อจมหายไปใต้ Navbar */
@@ -152,3 +153,7 @@ figcaption { margin-top: 10px; color: #7f8c8d; font-style: italic; font-size: 0.
 }
 .local-image h2, .local-image p { color: white; border-color: white; }
 .local-image pre { background: rgba(0,0,0,0.7); }
+
+.workshop{
+    
+}

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML: Tutorials</title>
+     
     <style>
         :root {
             --bg-body: #fafafa; 
@@ -32,7 +33,10 @@
             padding: 10px 0;
             border-bottom: 1px dashed var(--border-color); }
         ul li a {
-            text-decoration: none; color: var(--accent); font-weight: bold; }
+            text-decoration: none; color: var(--accent); font-weight: bold; 
+            }
+           
+            
         pre 
         { background-color: var(--code-bg); 
             border-left: 4px solid var(--accent); border-radius: 8px; 
@@ -40,40 +44,200 @@
             font-size: 0.9rem; white-space: pre-wrap; }
         .workshop-btn { background-color: var(--primary); color: #fff; padding: 6px 14px; border-radius: 20px; text-decoration: none; font-size: 0.8rem; }
         .workshop-btn:hover { background-color: var(--accent); }
+        .workshop{
+            .button2 {border: 2px dotted #008CBA;}
+        }
+        .ws{
+    display: inline-block;
+    background-color: brown;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.ws:hover{
+    background-color: darkred;
+    transform: translateY(-2px);
+}
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>HTML Tutorials</h1>
-            <p>คู่มือพื้นฐานการเขียนเว็บด้วย HTML ฉบับ Minimal</p>
-        </header>
 
-        <nav class="nav-card">
-            <h2>Topics List</h2>
-            <ul>
-                <li><a href="linkf.html">➜ Creating Links (Workshop Full)</a></li>
-                <li><a href="images.html">➜ Adding Images & Figure (Workshop)</a></li>
-            </ul>
-        </nav>
+<h1 id="Head">HTML TUTORIAL</h1>
+<p>Welcome to the HTML tutorial. Click on the topics below to start learning:</p>
 
-        <section id="creating-links">
-            <h2>Creating Links <a href="linkf.html" class="workshop-btn">View Workshop</a></h2>
-            <p>การสร้างจุดเชื่อมโยง (Hyperlinks) ทั้งภายในและภายนอก</p>
-        </section>
+<hr>
 
-        <section id="adding-images">
-            <h2>Adding Images <a href="images.html" class="workshop-btn">View Workshop</a></h2>
-            <p>การแทรกรูปภาพและใส่คำอธิบายภาพ (Figure & Caption)</p>
-        </section>
+<h2>Topics List</h2>
+<ul>
 
-        <section>
-            <h2>Other Workshops</h2>
-            <ul>
-                <li><a href="images.html">Workshop 01: Figure + Caption</a></li>
-                <li><a href="linkf.html">Workshop 02: Full Links Version</a></li>
-            </ul>
-        </section>
-    </div>
+<li><a href="#introduction">Introduction to HTML</a></li>
+<li><a href="#structure">HTML Document Structure</a></li>
+<li><a href="#heading">Heading</a></li>
+<li><a href="#paragraph">Paragraph</a></li>
+<li><a href="#textFormat">Text Formatting</a></li>
+<li><a href="#createl">Creating Links</a></li>
+<li><a href="#list">Lists (Ordered and Unordered)</a></li>
+<li><a href="#img">Adding Images</a></li>
+<li><a href="Home.html">My blog</a></li>
+<li><a href="#table">Creating Tables</a></li>
+<li><a href="#form">HTML Forms</a></li>
+<li><a href="#semantic">Semantic HTML</a></li>
+</ul>
+
+<hr>
+
+<!-- Introduction -->
+<h2 id="introduction">Introduction to HTML</h2>
+<p>HTML คือภาษามาตรฐานสำหรับสร้างเว็บไซต์</p>
+<pre>
+- HTML stands for Hyper Text Markup Language
+- HTML describes the structure of a Web page
+- HTML uses tags to label content
+- HTML is a markup language (ไม่ใช่ programming language)
+</pre>
+<p><a href="#Head">Top</a></p>
+<hr>
+
+<!-- Structure -->
+<h2 id="structure">HTML Document Structure</h2>
+<p>โครงสร้างพื้นฐานของไฟล์ HTML</p>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+Content here
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p><a href="#Head">Top</a></p>
+<hr>
+
+<!-- Heading -->
+<h2 id="heading">Heading</h2>
+<a href="heading.html" class="ws">workshop</a>
+<pre>
+&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+</pre>
+<p><a href="#Head">Top</a></p>
+<hr>
+
+<!-- Paragraph -->
+<h2 id="paragraph">Paragraph</h2>
+<a href="">workshop</a>
+<pre>
+&lt;p&gt;This is a paragraph&lt;/p&gt;
+</pre>
+<p><a href="#Head">Top</a></p>
+<hr>
+
+<!-- Text Formatting -->
+<h2 id="textFormat">Text Formatting</h2>
+<a href="formatting.html" class="ws" >workshop</a>
+<pre>
+&lt;b&gt;Bold&lt;/b&gt;
+&lt;i&gt;Italic&lt;/i&gt;
+&lt;u&gt;Underline&lt;/u&gt;
+&lt;strong&gt;Important&lt;/strong&gt;
+&lt;mark&gt;Highlight&lt;/mark&gt;
+</pre>
+<p><a href="#Head">Top</a></p>
+<hr>
+
+<!-- Creating Links -->
+<h2 id="createl">Creating Links</h2>
+<a href="linkf.html">workshop</a>
+<pre>
+&lt;a href="https://example.com"&gt;Visit Website&lt;/a&gt;
+&lt;a href="#section"&gt;Go to Section&lt;/a&gt;
+&lt;a href="mailto:test@email.com"&gt;Send Email&lt;/a&gt;
+</pre>
+<p><a href="#Head">Top</a></p>
+<hr>
+
+<!-- Lists -->
+<h2 id="list">Lists (Ordered and Unordered)</h2>
+<a href="">workshop</a>
+<pre>
+&lt;ul&gt;
+&lt;li&gt;Item 1&lt;/li&gt;
+&lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+&lt;li&gt;First&lt;/li&gt;
+&lt;li&gt;Second&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+<p><a href="#Head">Top</a></p>
+<hr>
+
+<!-- Images -->
+<h2 id="img">Adding Images</h2>
+<a href="images.html" class="ws" >workshop</a>
+<pre>
+&lt;img src="image.jpg" alt="description"&gt;
+</pre>
+<p><a href="#Head">Top</a></p>
+<hr>
+
+<!-- Tables -->
+<h2 id="table">Creating Tables</h2>
+<a href="">Workshop 1 Workshop 2</a>
+<pre>
+&lt;table&gt;
+&lt;tr&gt;
+&lt;th&gt;Header&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Data&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+<p><a href="#Head">Top</a></p>
+<hr>
+
+<!-- Forms -->
+<h2 id="form">HTML Forms</h2>
+<pre>
+&lt;form action="" method="post"&gt;
+&lt;input type="text"&gt;
+&lt;input type="submit"&gt;
+&lt;/form&gt;
+</pre>
+<p><a href="#Head">Top</a></p>
+<hr>
+
+<!-- Semantic -->
+<h2 id="semantic">Semantic HTML</h2>
+<pre>
+&lt;header&gt;
+&lt;nav&gt;
+&lt;section&gt;
+&lt;article&gt;
+&lt;footer&gt;
+</pre>
+<p><a href="#Head">Top</a></p>
+<hr>
+
+<h2>My Workshop</h2>
+<a href="">workshop01: rabbit</a><br>
+<a href="">workshop02: Login</a>
+
+<hr>
+
+<a href="https://www.w3schools.com/" target="_blank">
+Learn More About HTML
+</a>
+
 </body>
 </html>
