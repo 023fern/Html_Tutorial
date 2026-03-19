@@ -6,62 +6,194 @@
     <title>HTML: Tutorials</title>
      
     <style>
-        :root {
-            --bg-body: #fafafa; 
-            --bg-card: #ffffff; 
-            --text-main: #333333;
-            --text-muted: #666666;
-             --primary: #4a5568; 
-             --accent: #3182ce;
-            --success: #00a884; 
-            --border-color: #e2e8f0; 
-            --code-bg: #f7f9fa;
-            --code-text: #e53e3e; 
-            --highlight-pink: #c4005a;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { background-color: var(--bg-body); color: var(--text-main); font-family: -apple-system, sans-serif; line-height: 1.7; padding: 50px 20px; }
-        .container { max-width: 850px; margin: 0 auto; }
-        header { margin-bottom: 30px; }
-        .nav-card, 
-        section { background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 32px; margin-bottom: 40px; }
-        h1 { font-size: 2.3rem; margin-bottom: 10px; }
-        h2 { font-size: 1.6rem; color: var(--primary); margin-bottom: 15px; display: flex; align-items: center; justify-content: space-between; }
-        p { color: var(--text-muted); margin-bottom: 15px; }
-        ul { list-style: none; }
-        ul li { 
-            padding: 10px 0;
-            border-bottom: 1px dashed var(--border-color); }
-        ul li a {
-            text-decoration: none; color: var(--accent); font-weight: bold; 
-            }
-           
-            
-        pre 
-        { background-color: var(--code-bg); 
-            border-left: 4px solid var(--accent); border-radius: 8px; 
-            padding: 20px; margin: 20px 0; font-family: monospace; 
-            font-size: 0.9rem; white-space: pre-wrap; }
-        .workshop-btn { background-color: var(--primary); color: #fff; padding: 6px 14px; border-radius: 20px; text-decoration: none; font-size: 0.8rem; }
-        .workshop-btn:hover { background-color: var(--accent); }
-        .workshop{
-            .button2 {border: 2px dotted #008CBA;}
-        }
-        .ws{
-    display: inline-block;
-    background-color: rgb(42, 61, 165);
-    color: white;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: 0.3s ease;
+:root {
+    --bg-body: #f8fafc; 
+    --bg-card: #ffffff; 
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --primary: #1e293b; 
+    --accent: #2563eb;
+    --border-color: #e2e8f0; 
+    --code-bg: #1e293b; /* เปลี่ยนเป็นสีเข้มแบบ Dark mode ให้ Code ดูเด่นขึ้น */
+    --code-text: #f8fafc; 
 }
 
-.ws:hover{
-    background-color: rgb(141, 135, 255);
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body { 
+    background-color: var(--bg-body); 
+    color: var(--text-main); 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    line-height: 1.6; 
+    padding: 60px 20px; 
+}
+
+.container { 
+    max-width: 900px; 
+    margin: 0 auto; 
+    background: var(--bg-card);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* หัวข้อใหญ่ */
+h1 { 
+    font-size: 2.5rem; 
+    color: var(--primary); 
+    margin-bottom: 20px; 
+    text-align: center;
+    letter-spacing: -1px;
+}
+
+/* เส้นคั่น */
+hr { 
+    border: 0; 
+    height: 1px; 
+    background: var(--border-color); 
+    margin: 40px 0; 
+}
+
+/* หัวข้อ Section */
+h2 { 
+    font-size: 1.5rem; 
+    color: var(--primary); 
+    margin-top: 20px;
+    margin-bottom: 15px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+}
+
+
+ul { 
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* แบ่งเป็นคอลัมน์ให้อ่านง่าย */
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+ul li { 
+    padding: 8px 15px;
+    list-style: none;
+    background: #f1f5f9;
+    border-radius: 8px;
+    border: none;
+    transition: 0.2s;
+    
+}
+
+ul li:hover {
+    background: #e2e8f0;
+    transform: translateX(5px);
+}
+
+ul li a { 
+    text-decoration: none; 
+    color: var(--accent); 
+    font-weight: 500; 
+    font-size: 0.95rem;
+}
+
+
+pre { 
+    background-color: var(--code-bg); 
+    color: var(--code-text);
+    border-left: 5px solid var(--accent); 
+    border-radius: 12px; 
+    padding: 25px; 
+    margin: 20px 0; 
+    font-family: 'Consolas', 'Monaco', monospace; 
+    font-size: 0.95rem; 
+    overflow-x: auto;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+}
+
+
+.ws {
+    display: inline-flex;
+    align-items: center;
+    background-color: #78a3ff;
+    color: white !important;
+    padding: 6px 16px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: 0.3s;
+}
+
+.ws:hover {
+    background-color: #121294;
     transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(26, 20, 3, 0.2);
+}
+.ws-center {
+    display: block;   
+    width: fit-content; 
+    margin: 20px auto;  
+    text-align: center;
+    padding: 12px 30px; 
+    font-size: 1.1rem;   
+    border-radius: 12px; 
+    
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 58, 164, 0.2); 
+}
+a[href="#Head"] {
+    color: #8b1a1a;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 5px;
+      background-color: #ff7878;
+    border-radius: 15px;
+      padding: 6px 16px;
+}
+
+a[href="#Head"]:hover {
+    color: var(--bg-body);
+    background-color: #ac0000;
+}
+
+
+.home-container {
+    padding: 20px 0;
+}
+
+.mini-profile-card {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.profile-details h2 {
+    margin-top: 0;
+    color: #1e293b;
+    font-size: 1.25rem;
+}
+
+
+a[target="_blank"] {
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none;
+    padding: 15px;
+    border: 2px solid var(--accent);
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+a[target="_blank"]:hover {
+    background: var(--accent);
+    color: white;
 }
 .home-container {
     padding: 40px 20px;
@@ -297,7 +429,8 @@ Content here
 
 <!-- Tables -->
 <h2 id="table">Creating Tables</h2>
-<a class="ws">Workshop 1 Workshop 2</a>
+<a class="ws">Workshop 1 </a>
+<a class="ws">Workshop 2</a>
 <pre>
 &lt;table&gt;
 &lt;tr&gt;
@@ -337,9 +470,9 @@ Content here
 
 <h2 id="Student Grade Report"></h2>
  <h1>Student Grade Report</h1>
-        <p> รายงานผลเกรดเฉลี่ย</p>
+        <h1>รายงานผลเกรดเฉลี่ย</h1>
     </div>
-<a href="preExam.html" class="ws" >workshop</a>
+<a href="preExam.html"  class="ws ws-center" >workshop</a>
   <div class="home-container">
     <div class="mini-profile-card">
         <div class="card-content">
