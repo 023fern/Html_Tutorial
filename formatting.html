@@ -64,7 +64,6 @@ section {
     margin-bottom: 40px;
 }
 
-/* Hover effect */
 .card:hover {
     transform: translateY(-2px);
     transition: 0.2s ease;
@@ -76,7 +75,6 @@ p {
     margin-bottom: 15px;
 }
 
-/* Lists */
 ul {
     list-style: none;
     padding-left: 0;
@@ -87,7 +85,6 @@ ul li {
     border-bottom: 1px dashed var(--border-color);
 }
 
-/* Code */
 pre {
     background-color: var(--code-bg);
     border-left: 4px solid var(--accent);
@@ -127,7 +124,6 @@ code {
     background-color: var(--accent);
 }
 
-/* Special Boxes */
 .box {
     background-color: #fff5f5;
     border: 1px solid #feb2b2;
@@ -145,17 +141,46 @@ code {
     margin-top: 20px;
 }
 
-/* Highlight */
 .highlight-text {
     color: var(--highlight-pink);
     font-weight: bold;
 }
 
-/* Footer */
 footer {
     text-align: center;
     color: var(--text-muted);
     margin-top: 40px;
+}
+
+.student-work b, 
+.student-work strong, 
+.student-work i, 
+.student-work em, 
+.student-work u, 
+.student-work ins, 
+.student-work mark, 
+.student-work small {
+    color: var(--highlight-pink); 
+    font-weight: bold; 
+}
+
+
+.student-work mark {
+    background-color: transparent; 
+}
+
+
+.student-work h1 {
+    font-size: 1.8rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+.student-work p {
+    margin-bottom: 20px;
+    text-align: justify; 
 }
 
     </style>
@@ -214,12 +239,28 @@ footer {
         </ul>
     </section>
 
-    <section class="card">
-        <h2>บล็อกนี้สำหรับนักศึกษาหาเนื้อหามาใส่เอง</h2>
-        <p>เอาเนื้อหามาใส่ในนี้</p>
-        <br>
-        <br>
-        </section>
+  <section class="card student-work">
+        
+        <h1>DNA Data Storage: อนาคตการจัดเก็บข้อมูลระดับโมเลกุล</h1>
+
+        <p>
+            ในยุคที่ข้อมูลดิจิทัลล้นโลก เทคโนโลยี <b>DNA Data Storage</b> กำลังถูกพัฒนาขึ้นเพื่อแก้ปัญหาขีดจำกัดของพื้นที่จัดเก็บ 
+            โดยการเปลี่ยนรหัสเลขฐานสองให้กลายเป็นรหัสพันธุกรรม <u>A, C, G และ T</u> ของสายดีเอ็นเอสังเคราะห์ 
+            ซึ่งมีความหนาแน่นของข้อมูลสูงกว่าฮาร์ดดิสก์ปัจจุบันถึง <i>หลายล้านเท่า</i> ทำให้เราเก็บข้อมูลโลกไว้ได้ในพื้นที่เพียงห้องเดียว
+        </p>
+
+        <p>
+            จุดเด่นที่น่าทึ่งที่สุดคือความทนทาน <strong>ข้อมูลที่ถูกบันทึกลงใน DNA สามารถอยู่ได้นานนับพันปี</strong> หากเก็บรักษาไว้ในอุณหภูมิที่เหมาะสม 
+            ต่างจากแฟลชไดรฟ์ที่มีอายุการใช้งานเพียงไม่กี่สิบปี <mark>เทคโนโลยีนี้จึงเปรียบเสมือนแคปซูลกาลเวลาดิจิทัล</mark> 
+            ที่จะช่วยรักษาองค์ความรู้ของมนุษยชาติให้คงอยู่ชั่วกาลนานโดยไม่ต้องกังวลเรื่องการเสื่อมสภาพของอุปกรณ์แบบเดิม
+        </p>
+
+        <p>
+            แม้ว่าในปัจจุบัน <small>ค่าใช้จ่ายในการสังเคราะห์และอ่านรหัสยังคงมีราคาสูง</small> แต่ความก้าวหน้าทางวิศวกรรมคอมพิวเตอร์ 
+            และเทคโนโลยีชีวภาพกำลังร่วมมือกันเพื่อทำให้มันใช้งานได้จริงในเชิงพาณิชย์ <em>นี่ไม่ใช่เพียงแค่เรื่องในนิยายวิทยาศาสตร์อีกต่อไป</em> 
+            แต่คือวิวัฒนาการขั้นสุดยอดที่คอมพิวเตอร์สมัยใหม่จะหลอมรวมเข้ากับโครงสร้างพื้นฐานของสิ่งมีชีวิตอย่างสมบูรณ์แบบ
+        </p>
+    </section>
 
     <a href="index.html" class="btn-back">← Back to HTML Tutorial</a>
 
