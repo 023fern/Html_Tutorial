@@ -49,7 +49,7 @@
         }
         .ws{
     display: inline-block;
-    background-color: brown;
+    background-color: rgb(42, 61, 165);
     color: white;
     padding: 6px 14px;
     border-radius: 20px;
@@ -60,8 +60,110 @@
 }
 
 .ws:hover{
-    background-color: darkred;
+    background-color: rgb(141, 135, 255);
     transform: translateY(-2px);
+}
+.home-container {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.mini-profile-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 25px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* เงาฟุ้งๆ ดูแพง */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+
+.mini-profile-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(26, 79, 139, 0.15);
+}
+
+.card-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-img-box img {
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.profile-details h2 {
+    font-size: 1.2rem;
+    color: #1a4f8b;
+    margin: 5px 0;
+}
+
+.profile-details p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 2px 0;
+}
+
+.badge {
+    background: #eef4ff;
+    color: #1a4f8b;
+    font-size: 0.7rem;
+    padding: 4px 10px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+.card-actions {
+    margin-top: 15px;
+}
+
+.btn-workshop {
+    display: inline-flex;
+    align-items: center;
+    background: #003aa4; 
+    color: white !important;
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.btn-workshop:hover {
+    background: #133a66;
+    box-shadow: 0 4px 12px rgba(26, 79, 139, 0.3);
+}
+
+.btn-workshop .arrow-right {
+    margin-left: 8px;
+    transition: transform 0.3s;
+}
+
+.btn-workshop:hover .arrow-right {
+    transform: translateX(5px);
+}
+
+@media (max-width: 480px) {
+    .card-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .profile-img-box {
+        margin-bottom: 10px;
+    }
 }
     </style>
 </head>
@@ -89,6 +191,7 @@
 <li><a href="#table">Creating Tables</a></li>
 <li><a href="#form">HTML Forms</a></li>
 <li><a href="#semantic">Semantic HTML</a></li>
+<li><a href="#Student Grade Report">Student Grade Report</a></li>
 </ul>
 
 <hr>
@@ -135,7 +238,7 @@ Content here
 
 <!-- Paragraph -->
 <h2 id="paragraph">Paragraph</h2>
-<a href="">workshop</a>
+<a class="ws">workshop</a>
 <pre>
 &lt;p&gt;This is a paragraph&lt;/p&gt;
 </pre>
@@ -157,7 +260,7 @@ Content here
 
 <!-- Creating Links -->
 <h2 id="createl">Creating Links</h2>
-<a href="linkf.html">workshop</a>
+<a href="linkf.html" class="ws">workshop</a>
 <pre>
 &lt;a href="https://example.com"&gt;Visit Website&lt;/a&gt;
 &lt;a href="#section"&gt;Go to Section&lt;/a&gt;
@@ -168,7 +271,7 @@ Content here
 
 <!-- Lists -->
 <h2 id="list">Lists (Ordered and Unordered)</h2>
-<a href="">workshop</a>
+<a class="ws">workshop</a>
 <pre>
 &lt;ul&gt;
 &lt;li&gt;Item 1&lt;/li&gt;
@@ -194,7 +297,7 @@ Content here
 
 <!-- Tables -->
 <h2 id="table">Creating Tables</h2>
-<a href="">Workshop 1 Workshop 2</a>
+<a class="ws">Workshop 1 Workshop 2</a>
 <pre>
 &lt;table&gt;
 &lt;tr&gt;
@@ -231,10 +334,30 @@ Content here
 <p><a href="#Head">Top</a></p>
 <hr>
 
-<h2>My Workshop</h2>
-<a href="">workshop01: rabbit</a><br>
-<a href="">workshop02: Login</a>
 
+<h2 id="Student Grade Report"></h2>
+ <h1>Student Grade Report</h1>
+        <p> รายงานผลเกรดเฉลี่ย</p>
+    </div>
+<a href="preExam.html" class="ws" >workshop</a>
+  <div class="home-container">
+    <div class="mini-profile-card">
+        <div class="card-content">
+            <div class="profile-img-box">
+                <img src="./images/pre.jpg" alt="Profile">
+            </div>
+            <div class="profile-details">
+                <span class="badge">Student Profile</span>
+                <h2>บัณฑิตา สระกลาง</h2>
+                <p>รหัส: 664259023</p>
+                <p>หมู่เรียน: 66/110</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<p><a href="#Head">Top</a></p>
 <hr>
 
 <a href="https://www.w3schools.com/" target="_blank">
