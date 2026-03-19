@@ -380,3 +380,31 @@ footer {
   outline: none;
   box-shadow: 0 0 3px var(--secondary-color);
 }
+.btn-return-home {
+        display: inline-block;
+        padding: 12px 28px;
+        background-color: transparent;
+        color: #333; /* หรือใช้สีที่เข้ากับธีม */
+        text-decoration: none;
+        border: 2px solid #333;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .btn-return-home:hover {
+        background-color: #333;
+        color: #fff;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .btn-return-home .arrow {
+        margin-right: 8px;
+        transition: margin 0.3s ease;
+    }
+
+    .btn-return-home:hover .arrow {
+        margin-right: 12px;
+    }
+
